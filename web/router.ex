@@ -13,6 +13,8 @@ defmodule HelloAbsinthe.Router do
     plug :accepts, ["json"]
   end
 
+  forward "/graphql", Absinthe.Plug, schema: HelloAbsinthe.Schema
+
   scope "/", HelloAbsinthe do
     pipe_through :browser # Use the default browser stack
 

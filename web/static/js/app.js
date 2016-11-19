@@ -9,11 +9,9 @@ import PostList from "./PostList.jsx";
 //  `/graphql` endpoint on the same host
 const client = new ApolloClient();
 
-let rootEl = document.getElementById("app");
-
 ReactDOM.render(
   <ApolloProvider client={client}>
     <PostList />
   </ApolloProvider>,
-  rootEl
+  document.getElementById("app")
 );

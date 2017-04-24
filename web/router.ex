@@ -14,6 +14,7 @@ defmodule HelloAbsinthe.Router do
   end
 
   forward "/graphql", Absinthe.Plug, schema: HelloAbsinthe.Schema
+  forward "/graphiql", Absinthe.Plug.GraphiQL, schema: HelloAbsinthe.Schema
 
   scope "/", HelloAbsinthe do
     pipe_through :browser # Use the default browser stack
